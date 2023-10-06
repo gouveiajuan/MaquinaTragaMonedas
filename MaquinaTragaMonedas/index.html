@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquina Tragaperras!</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="container has-text-centered block pt-6">
+        <h1>MAQUINA TRAGAPERRAS</h1>
+
+    </div>
+  
+  <label for="domTextElement">Introduce la cantidad de monedas: </label>
+  <input type="number" class="domTextElement2" id="mon" > 
+  
+  <button type="button" id="ahoraSi"  onclick="getValueInput()"> 
+      Introducir 
+  </button> 
+  
+  <p id="valueInput"></p> 
+
+  <script> 
+
+    
+    const getValueInput = () =>{
+    
+      let inputValue2 = document.querySelector(".domTextElement2").value; 
+      document.querySelector("#valueInput").innerHTML = `Cantidad de monedas actual: `; 
+    }
+    
+  </script>
+
+<!-- Bloque con botonera, contador de monedas y hueco donde aparecerán los premios -->
+    <nav class="level">
+
+                <!-- Contador de monedas -->
+                <div class="level-item has-text-centered">
+                    <div id="contador"></div>
+                </div>
+            </nav>
+        
+        <!-- Botonera -->
+        <div class="level-item has-text-centered">
+            <div class="field is-grouped">
+                <p class="control">
+
+                <p class="control">
+                    <button class="button is-danger is-small" id="salir">
+                        Salir
+                    </button>
+                </p>
+
+                
+            </div>
+        </div>
+
+    <!--Bloque con Slots contenedores de las frutas -->
+    <nav class="level is-justify-content-center">
+        <div class=""style = "width:100%; margin-right: 10px;">
+            <div class="">
+                <div id="fruta1" class="" role="status" style="float:left; width:25%;"></div>
+            </div>
+            <div class="">
+                <div id="fruta2" class="" role="status" style="float:left; width:25%;"></div>
+            </div>
+            <div class="">
+                <div id="fruta3" class="" role="status" style="float:left; width:25%;">
+                </div>
+                
+
+            </div>
+            </div>
+    </nav>
+
+
+<!-- bloque de codigo para la palanca -->
+<a href="#" onclick="return changeImage(), changeImageBack()", onMouseDown="return changeImage()" onMouseUp="return changeImageBack()" 
+><img
+name="jsbutton" id="btnJugar" src="img/palancaUP.png" style="float:left; width:25%;"
+alt="javascript button"></a> 
+
+<script type="text/javascript"> 
+
+function changeImage() 
+{
+  document.images["jsbutton"].src = "img/palancaDOWN.png";
+
+  setTimeout(function(){
+    changeImageBack;
+},100);
+  return true;
+}
+
+function changeImageBack() {setTimeout(function(){
+    changeImageBack;
+{
+  document.images["jsbutton"].src = "img/palancaUP.png";
+  return true;
+}},100);}
+
+</script>
+
+<p id="separacion">s</p>
+
+
+<p>Historial de Movimientos:</p>
+<!-- Tabla resumen de jugadas -->
+    <section class="section">
+    
+            <div class="column is-narrow oculto" id="divTabla">
+               
+                <table>
+                    <li id="resultados-jugadas"></br></li>
+                </table>
+
+            </div>  
+        
+    </section>
+    
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

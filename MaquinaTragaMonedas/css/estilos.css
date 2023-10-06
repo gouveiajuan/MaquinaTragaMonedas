@@ -1,0 +1,62 @@
+/* hoja de estilos para el programa*/
+html {
+  background-color: #ffffff;
+}
+
+h1 {
+  color: #000000;
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+img{
+    width: 100%; 
+}
+
+#separacion{
+  color: #f0f5f4;
+}
+
+#contador {
+  background-color: #f4fffd;
+  width: 8em;
+  text-align: center;
+  border-radius: 5px ;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#fruta1
+{
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+  
+}
+#fruta2{
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+
+}
+ #fruta3{
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+
+}
+ #btnJugar {
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+ 
+}
+
+.oculto{
+  display: none;
+}
+.divTabla{
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  display: block;
+}
